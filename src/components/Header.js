@@ -11,8 +11,8 @@ const Header = () => {
       Jolly Cooperation
     </Navbar.Brand>
     <Navbar.Collapse>
-      <Nav className="me-auto container-fluid ml-auto">
-        <NavDropdown 
+      <Nav className="me-auto ml-auto container-fluid justify-content-end">
+        <NavDropdown
           title='User' 
           id='basic-nav-dropdown'>
           <NavDropdown.Item>
