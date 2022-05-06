@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "capstone-jolly-cooperation",
-    "slug": "capstone-jolly-cooperation",
+    "name": "jolly-cooperation",
+    "slug": "jolly-cooperation",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "capstone-jolly-cooperation"
+  "name": "jolly-cooperation"
 }

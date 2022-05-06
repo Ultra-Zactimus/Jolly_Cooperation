@@ -1,4 +1,4 @@
-package com.capstonejollycooperation.newarchitecture;
+package com.jollycooperation.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.capstonejollycooperation.BuildConfig;
-import com.capstonejollycooperation.newarchitecture.components.MainComponentsRegistry;
-import com.capstonejollycooperation.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.jollycooperation.BuildConfig;
+import com.jollycooperation.newarchitecture.components.MainComponentsRegistry;
+import com.jollycooperation.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

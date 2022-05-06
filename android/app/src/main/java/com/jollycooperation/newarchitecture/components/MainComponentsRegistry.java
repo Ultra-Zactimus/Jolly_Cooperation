@@ -1,4 +1,4 @@
-package com.capstonejollycooperation.newarchitecture.components;
+package com.jollycooperation.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

@@ -1,4 +1,4 @@
-package com.capstonejollycooperation;
+package com.jollycooperation;
 
 import android.os.Build;
 import android.os.Bundle;
