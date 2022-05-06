@@ -1,9 +1,10 @@
-import react from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header';
 
 const App = () => {
   return (
     <>
-      <h1>Testing</h1>
+      <Header />
     </>
   );
 }
