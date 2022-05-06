@@ -6,3 +6,5 @@ I am going to continue watching Mosh's tutorial because I am still not 100% sure
 
 12:33pm gonna have to start the project over from scratch. never installed react native before expo and missing the correct files. project will not build. probably gonna stop coding to not lose progress on attendance and try to do that this weekend.
 12:33pm taking a lunnch break
+
+1:48pm after trying to get this working I am starting to fear that I may need to change my proposal to normal React. I am having a super hard time just getting this to work
