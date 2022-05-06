@@ -9,7 +9,7 @@ import Profile from './Profile';
 import Messages from './Messages';
 import MessageBoard from './MessageBoard';
 import firebase from "firebase/compat/app";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
