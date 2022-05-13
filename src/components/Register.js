@@ -8,14 +8,6 @@ const Register = () => {
         <div className="mt-4 mb-5">
           <h1>Registration</h1>
         </div>
-        <Form.Label>Create a Username</Form.Label>
-        <Form.Control 
-          className="mt-2"
-          title="username"
-          name="username"
-          placeholder="Enter a Username"
-          required
-        />
         <Form.Label className="mt-4">Enter Your Email</Form.Label>
         <Form.Control 
           className="mt-2"
