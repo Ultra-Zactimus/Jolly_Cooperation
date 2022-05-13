@@ -14,16 +14,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   // eslint-disable-next-line
-  const [ user, setUser ] = useState(null);
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(async(userData) => {
-      if (userData) {
-        setUser(userData);
-      } else {
-        setUser(null);
-      }
-    });
-  }, []);
+  // const [ user, setUser ] = useState(null);
+  // useEffect(() => {
+  //   firebase.auth().onAuthStateChanged(async(userData) => {
+  //     if (userData) {
+  //       setUser(userData);
+  //     } else {
+  //       setUser(null);
+  //     }
+  //   });
+  // }, []);
 
   return (
     <Router>

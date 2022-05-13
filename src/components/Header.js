@@ -27,6 +27,8 @@ const Header = () => {
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
+    <button className="btn btn-success me-2">Register</button>
+    <button className="btn btn-success ms-2">Login</button>
     </Container>
   </Navbar>
     </>
