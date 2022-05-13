@@ -3,43 +3,43 @@ import { Container, Form } from 'react-bootstrap';
 
 const Register = () => {
   return (
-    <Container>
-      <div className="mt-4 justify-content-center d-flex">
-        <h1>Registration</h1>
-      </div>
+    <Container className="justify-content-center d-flex">
       <Form className="mt-5">
+        <div className="mt-4 mb-5">
+          <h1>Registration</h1>
+        </div>
         <Form.Label>Create a Username</Form.Label>
         <Form.Control 
-          className="w-50 mt-2"
+          className="mt-2"
           title="username"
           name="username"
-          placeholder="please enter a user name -- ex. BobGaming3434"
+          placeholder="Enter a Username"
           required
         />
         <Form.Label className="mt-4">Enter Your Email</Form.Label>
         <Form.Control 
-          className="w-50 mt-2"
+          className="mt-2"
           title="email"
           name="email"
-          placeholder="please enter your email -- ex. example@example.com"
+          placeholder="Enter your Email"
           required
         />
         <Form.Label className="mt-4">Enter Your Password</Form.Label>
         <Form.Control 
-          className="w-50 mt-2"
+          className="mt-2"
           title="password"
           type="password"
           name="password"
-          placeholder="please enter your password"
+          placeholder="Enter your Password"
           required
         />
         <Form.Label className="mt-4">Confirm Your Password</Form.Label>
         <Form.Control 
-          className="w-50 mt-2"
+          className="mt-2"
           title="confirm"
           type="password"
           name="confirm"
-          placeholder="please confirm your password"
+          placeholder="Confirm your Password"
           required
         />
         <button className="btn btn-success mt-5">Submit</button>
