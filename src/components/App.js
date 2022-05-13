@@ -30,7 +30,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <MessageList />
+      <Register />
       {/* <Routes>
         <Route path="/register/*" element={<Register />}/>
         <Route path="/signin/*" element={<Signin />}/>
