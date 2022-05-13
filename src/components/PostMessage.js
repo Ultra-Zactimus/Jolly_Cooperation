@@ -3,11 +3,10 @@ import { Container, Form, Button } from 'react-bootstrap';
 
 const PostMessage = () => {
 
-
   return (
     <Container 
       className="justify-content-center d-flex border border-dark rounded mt-5 mb-5 pl-5 pr-5">
-      <Form onSubmit={addMessageToFirestore}>
+      <Form>
         <h3 className="mt-5">Post a New Message</h3>
 
         <Form.Label className="mt-5">Platform</Form.Label>

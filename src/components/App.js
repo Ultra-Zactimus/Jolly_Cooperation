@@ -1,4 +1,4 @@
-import './App.css'
+import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import Games from './Games';
@@ -16,9 +16,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
 
   return (
-    <Router>
+    <Router style={{backgroundColor: "grey"}}>
       <Header />
       <Register />
+      <Signin />
+      <MessageBoard />
+      <PostMessage />
+      <Games />
       {/* <Routes>
         <Route path="/register/*" element={<Register />}/>
         <Route path="/signin/*" element={<Signin />}/>
