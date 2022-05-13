@@ -7,12 +7,14 @@ const MessageBoard = () => {
     <Container>
       <Row>
         <div className="col-12 col-xl-9">
-          <h3 className="h4 mb-0 p-4 rounded-top ">Placeholder 1</h3>
-          <table className="table table-striped table-bordered table-responsive">
+          <h3 className="h4 mb-0 p-4 rounded-top ">Jolly Cooperation Forums</h3>
+          <table className="table table-striped table-bordered table-responsive table-dark">
             <thead>
               <tr>
-                <th scope="col" className="forum-col">Forum</th>
-                <th scope="col">Topics</th>
+                <th scope="col" className="forum-col">
+                  <h4><a href="#">Multiplayer</a></h4>
+                </th>
+                <th scope="col">Games</th>
                 <th scope="col">Posts</th>
                 <th scope="col" className="last-post-col">Last Post</th>
               </tr>
@@ -20,8 +22,8 @@ const MessageBoard = () => {
             <tbody>
               <tr>
                 <td>
-                  <h3 className="mb-0 h5"><a href="#">Forum Name</a></h3>
-                  <p className="mb-0">lorem ipsum lorem ipsum lorem ipsum</p>
+                  <h5 className="mb-0 h5"><a href="#">Co-Op</a></h5>
+                  <p className="mb-0">Forum for players to meet other players for co-op play</p>
                 </td>
                 <td>
                   <div>9</div>
@@ -30,7 +32,146 @@ const MessageBoard = () => {
                   30
                 </td>
                 <td>
-                  <h4 className="h6 mb-0"><a href="#">Post Name</a></h4>
+                  <h5 className="h6 mb-0"><a href="#">Author Name</a></h5>
+                  <div>by <a href="#">username</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5 className="mb-0 h5"><a href="#">PVP</a></h5>
+                  <p className="mb-0">Forum for players to meet other players for competitive play</p>
+                </td>
+                <td>
+                  <div>9</div>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  <h5 className="h6 mb-0"><a href="#">Author Name</a></h5>
+                  <div>by <a href="#">username</a></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table className="table table-striped table-bordered table-responsive table-dark">
+            <thead>
+              <tr>
+                <th scope="col" className="forum-col">
+                  <h4><a href="#">Guides</a></h4>
+                </th>
+                <th scope="col">Games</th>
+                <th scope="col">Posts</th>
+                <th scope="col" className="last-post-col">Last Post</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h5 className="mb-0 h5"><a href="#">Walkthroughs</a></h5>
+                  <p className="mb-0">Guides made by players to help players</p>
+                </td>
+                <td>
+                  <div>9</div>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  <h5 className="h6 mb-0"><a href="#">Post Name</a></h5>
+                  <div>by <a href="#">Author Name</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5 className="mb-0 h5"><a href="#">Questions</a></h5>
+                  <p className="mb-0">Ask the community a question about a game</p>
+                </td>
+                <td>
+                  <div>9</div>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  <h5 className="h6 mb-0"><a href="#">Post Name</a></h5>
+                  <div>by <a href="#">Author Name</a></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table className="table table-striped table-bordered table-responsive table-dark">
+            <thead>
+              <tr>
+                <th scope="col" className="forum-col">
+                  <h4><a href="#">General Discussion</a></h4>
+                </th>
+                <th scope="col">Games</th>
+                <th scope="col">Posts</th>
+                <th scope="col" className="last-post-col">Last Post</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h5 className="mb-0 h5"><a href="#">Game News</a></h5>
+                  <p className="mb-0">dicussions on the latest gaming news</p>
+                </td>
+                <td>
+                  <div>9</div>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  <h5 className="h6 mb-0"><a href="#">Post Name</a></h5>
+                  <div>by <a href="#">Author Name</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5 className="mb-0 h5"><a href="#">Polls</a></h5>
+                  <p className="mb-0">participate in game related polls with other players</p>
+                </td>
+                <td>
+                  <div>9</div>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  <h5 className="h6 mb-0"><a href="#">Post Name</a></h5>
+                  <div>by <a href="#">Author Name</a></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table className="table table-striped table-bordered table-responsive table-dark">
+            <thead>
+              <tr>
+                <th scope="col" className="forum-col">
+                  <h4><a href="#">Help</a></h4>
+                </th>
+                <th scope="col">Games</th>
+                <th scope="col">Posts</th>
+                <th scope="col" className="last-post-col">Last Post</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h5 className="mb-0 h5"><a href="#">Troubleshooting</a></h5>
+                  <p className="mb-0">troubleshoot technical problems</p>
+                </td>
+                <td>
+                  <div>9</div>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  <h5 className="h6 mb-0"><a href="#">Post Name</a></h5>
+                  <div>by <a href="#">Author Name</a></div>
                 </td>
               </tr>
             </tbody>

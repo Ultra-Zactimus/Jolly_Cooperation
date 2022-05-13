@@ -1,3 +1,9 @@
 body {
   background-color: rgb(72, 86, 87);
 }
+.forum-col {
+  min-width: 256px;
+}
+.last-post-col {
+  min-width: 192px;
+}
