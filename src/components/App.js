@@ -28,7 +28,8 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
+      <Register />
+      {/* <Routes>
         <Route path="/register/*" element={<Register />}/>
         <Route path="/signin/*" element={<Signin />}/>
         <Route path="/profile/*" element={<Profile />}/>
@@ -37,7 +38,7 @@ const App = () => {
         <Route path="/post/*" element={<Post />}/>
         <Route path="/edit-post/*" element={<EditPost />}/>
         <Route path="/post-details/*" element={<PostDetails />}/>
-      </Routes>
+      </Routes> */}
     </Router>
   );
 }
