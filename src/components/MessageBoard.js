@@ -1,5 +1,4 @@
 import React from 'react';
-import Messages from './Messages';
 import { Container, Row } from 'react-bootstrap';
 
 const MessageBoard = () => {
@@ -32,7 +31,7 @@ const MessageBoard = () => {
                   30
                 </td>
                 <td>
-                  <h5 className="h6 mb-0"><a href="#">Author Name</a></h5>
+                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
                   <div>by <a href="#">username</a></div>
                 </td>
               </tr>

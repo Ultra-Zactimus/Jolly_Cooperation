@@ -6,6 +6,10 @@ const PostMessage = () => {
     <Container className="justify-content-center d-flex border border-dark rounded mt-5 mb-5 pl-5 pr-5">
       <Form>
         <h3 className="mt-5">Post a New Message</h3>
+        <Form.Label className="mt-5">Platform</Form.Label>
+        <Form.Control 
+          className="mt-2"
+        />
         <Form.Label className="mt-5">Topic Title</Form.Label>
         <Form.Control 
           className="mt-2"

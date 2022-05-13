@@ -1,12 +1,13 @@
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
+import Games from './Games';
 import PostMessage from './PostMessage';
 import MessageDetails from './MessageDetails';
 import EditMessage from './EditMessage';
 import Signin from './Signin';
 import Register from './Register';
-import Messages from './Messages';
+import MessageList from './Messages';
 import MessageBoard from './MessageBoard';
 import firebase from "firebase/compat/app";
 import React, { useState, useEffect } from 'react';
@@ -29,7 +30,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <PostMessage />
+      <Games />
       {/* <Routes>
         <Route path="/register/*" element={<Register />}/>
         <Route path="/signin/*" element={<Signin />}/>

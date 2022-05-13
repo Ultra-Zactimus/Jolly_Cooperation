@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 
-const MessageDetails = () => {
+const MessageList = () => {
   return (
     <Container>
       <Row>
@@ -154,4 +154,4 @@ const MessageDetails = () => {
   );
 }
 
-export default MessageDetails;
+export default MessageList;
