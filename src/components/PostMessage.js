@@ -1,7 +1,32 @@
 import React from 'react';
+import { useFirestore } from 'react-redux-firebase';
+import firebase from "firebase/compat/app";
 import { Container, Form } from 'react-bootstrap';
 
 const PostMessage = () => {
+
+  const firestore = useFirestore();
+
+  const addSurveyToFirestore = (event) => {
+
+    event.preventDefault();
+    const user = firebase.auth().currentUser;
+    
+    return firestore.collection('messages').add(
+      {
+        title: event.target.title.value,
+        q1: event.target.q1.value,
+        q2: event.target.q2.value,
+        q3: event.target.q3.value,
+        q4: event.target.q4.value,
+        q5: event.target.q5.value,
+        userEmail: user.uid,
+        timeOpen: firestore.FieldValue.serverTimestamp()
+      }
+    );
+    
+  }
+
   return (
     <Container className="justify-content-center d-flex border border-dark rounded mt-5 mb-5 pl-5 pr-5">
       <Form>

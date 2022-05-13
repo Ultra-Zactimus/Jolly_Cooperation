@@ -6,144 +6,92 @@ const MessageList = () => {
     <Container>
       <Row>
         <div className="col-12 col-xl-9">
-          <h3 className="h4 mb-0 p-4 rounded-top ">Games</h3>
+          <h3 className="h4 mb-0 p-4 rounded-top ">Posts</h3>
           <table className="table table-striped table-bordered table-responsive table-dark">
             <thead>
               <tr>
                 <th scope="col" className="forum-col">
-                  <h4>Title</h4>
+                  <h4>Message Title</h4>
                 </th>
-                <th scope="col">Platforms</th>
-                <th scope="col">Genre</th>
-                <th scope="col">Posts</th>
-                <th scope="col" className="last-post-col">Most Recent Post</th>
+                <th scope="col">Replies</th>
+                <th scope="col">Date</th>
+                <th scope="col" className="last-post-col">Posted By</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">Destiny 2</a></h5>
+                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
+                  <p>lorem ipsum lorem ipsum</p>
                 </td>
                 <td>
-                  <div>PC, XBOX, PlayStation</div>
+                  <div>12</div>
                 </td>
                 <td>
-                  FPS
+                  02-12-2023
                 </td>
                 <td>
-                  50
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
+                  <div><a href="#">username</a></div>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">Warframe</a></h5>
+                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
+                  <p>lorem ipsum lorem ipsum</p>
                 </td>
                 <td>
-                  <div>PlayStation</div>
+                  <div>12</div>
                 </td>
                 <td>
-                  Action
+                  02-12-2023
                 </td>
                 <td>
-                  30
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
+                  <div><a href="#">username</a></div>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">Animal Crossing: New Crossroads</a></h5>
+                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
+                  <p>lorem ipsum lorem ipsum</p>
                 </td>
                 <td>
-                  <div>Nintendo Switch</div>
+                  <div>12</div>
                 </td>
                 <td>
-                  Adventure/Simulation
+                  02-12-2023
                 </td>
                 <td>
-                  12
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
+                  <div><a href="#">username</a></div>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">Dark Souls Remastered</a></h5>
+                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
+                  <p>lorem ipsum lorem ipsum</p>
                 </td>
                 <td>
-                  <div>PC, XBOX, PlayStation, Nintendo Switch</div>
+                  <div>12</div>
                 </td>
                 <td>
-                  Action RPG
+                  02-12-2023
                 </td>
                 <td>
-                  22
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
+                  <div><a href="#">username</a></div>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">Street Fighter V</a></h5>
+                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
+                  <p>lorem ipsum lorem ipsum</p>
                 </td>
                 <td>
-                  <div>PC, PlayStation</div>
+                  <div>12</div>
                 </td>
                 <td>
-                  Fighting
+                  02-12-2023
                 </td>
                 <td>
-                  33
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h5 className="mb-0 h5"><a href="#">Gran Turismo 7</a></h5>
-                </td>
-                <td>
-                  <div>PlayStation</div>
-                </td>
-                <td>
-                  Driving Simulator
-                </td>
-                <td>
-                  20
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h5 className="mb-0 h5"><a href="#">Elden Ring</a></h5>
-                </td>
-                <td>
-                  <div>PC, XBOX, PlayStation</div>
-                </td>
-                <td>
-                  Action RPG
-                </td>
-                <td>
-                  44
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
+                  <div><a href="#">username</a></div>
                 </td>
               </tr>
             </tbody>
