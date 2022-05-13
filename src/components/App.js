@@ -1,3 +1,4 @@
+import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import Post from './Post';
@@ -11,6 +12,7 @@ import MessageBoard from './MessageBoard';
 import firebase from "firebase/compat/app";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
   // eslint-disable-next-line
@@ -28,8 +30,8 @@ const App = () => {
   return (
     <Router>
       <Header />
-
-      <Routes>
+      <MessageBoard />
+      {/* <Routes>
         <Route path="/register/*" element={<Register />}/>
         <Route path="/signin/*" element={<Signin />}/>
         <Route path="/profile/*" element={<Profile />}/>
@@ -38,7 +40,7 @@ const App = () => {
         <Route path="/post/*" element={<Post />}/>
         <Route path="/edit-post/*" element={<EditPost />}/>
         <Route path="/post-details/*" element={<PostDetails />}/>
-      </Routes>
+      </Routes> */}
     </Router>
   );
 }
