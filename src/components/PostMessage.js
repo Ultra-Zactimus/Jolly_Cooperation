@@ -1,33 +1,8 @@
 import React from 'react';
-import { useFirestore } from 'react-redux-firebase';
-import firebase from "firebase/compat/app";
 import { Container, Form, Button } from 'react-bootstrap';
 
 const PostMessage = () => {
 
-  const firestore = useFirestore();
-
-  const addMessageToFirestore = (event) => {
-
-    event.preventDefault();
-    console.log("event: ", event);
-    console.log("event targ1: ", event.target.title.value);
-
-    const user = firebase.auth().currentUser;
-    
-    return firestore.collection('messages').add(
-      {
-        platform: event.target.platform.value,
-        title: event.target.title.value,
-        description: event.target.description.value,
-        message: event.target.message.value,
-        tags: event.target.tags.value,
-        userEmail: user.uid,
-        timeOpen: firestore.FieldValue.serverTimestamp()
-      }
-    );
-    
-  }
 
   return (
     <Container 

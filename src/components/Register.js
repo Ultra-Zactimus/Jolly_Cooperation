@@ -1,23 +1,12 @@
 import React from 'react';
-import firebase from "firebase/compat/app";
 import { Container, Form, Button } from 'react-bootstrap';
 
 const Register = () => {
 
-  function handleRegistration(event) {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function () { console.log("Successfully Signed Up!"); })
-    .catch(function (error) { console.log(error.message); });
-  }
-
   return (
     <Container className="justify-content-center d-flex">
       <Form 
-        className="mt-5"
-        onSubmit={handleRegistration}>
+        className="mt-5">
 
         <div className="mt-4 mb-5">
           <h1>Registration</h1>

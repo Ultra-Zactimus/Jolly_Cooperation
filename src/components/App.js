@@ -9,23 +9,11 @@ import Signin from './Signin';
 import Register from './Register';
 import MessageList from './MessageList';
 import MessageBoard from './MessageBoard';
-import firebase from "firebase/compat/app";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 const App = () => {
-  // eslint-disable-next-line
-  // const [ user, setUser ] = useState(null);
-  // useEffect(() => {
-  //   firebase.auth().onAuthStateChanged(async(userData) => {
-  //     if (userData) {
-  //       setUser(userData);
-  //     } else {
-  //       setUser(null);
-  //     }
-  //   });
-  // }, []);
 
   return (
     <Router>
