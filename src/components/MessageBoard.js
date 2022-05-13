@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from './Post';
+import Messages from './Messages';
 import { Container, Row } from 'react-bootstrap';
 
 const MessageBoard = () => {
