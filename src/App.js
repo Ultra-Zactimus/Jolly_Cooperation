@@ -1,17 +1,16 @@
-import '../App.css'
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Header';
-import Games from './Games';
-import PostMessage from './PostMessage';
-import MessageDetails from './MessageDetails';
-import EditMessage from './EditMessage';
-import Signin from './Signin';
-import Register from './Register';
-import MessageList from './MessageList';
-import MessageBoard from './MessageBoard';
+import Header from './components/Header';
+import Games from './components/Games';
+import PostMessage from './components/PostMessage';
+import MessageDetails from './components/MessageDetails';
+import EditMessage from './components/EditMessage';
+import Signin from './components/Signin';
+import Register from './components/Register';
+import MessageList from './components/MessageList';
+import MessageBoard from './components/MessageBoard';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 
 const App = () => {
 
@@ -19,10 +18,10 @@ const App = () => {
     <Router style={{backgroundColor: "grey"}}>
       <Header />
       <Register />
-      <Signin />
-      <MessageBoard />
+      {/* <Signin /> */}
+      {/* <MessageBoard />
       <PostMessage />
-      <Games />
+      <Games /> */}
       {/* <Routes>
         <Route path="/register/*" element={<Register />}/>
         <Route path="/signin/*" element={<Signin />}/>

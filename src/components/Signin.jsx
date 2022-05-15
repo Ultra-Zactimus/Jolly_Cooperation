@@ -8,12 +8,12 @@ const Signin = () => {
         <div className="mt-5">
           <h1>Sign In</h1>
         </div>
-        <Form.Label className="mt-4">Username</Form.Label>
+        <Form.Label className="mt-4">Email</Form.Label>
         <Form.Control 
           className="mt-2"
-          title="username"
-          name="username"
-          placeholder="Enter your Username"
+          title="email"
+          name="email"
+          placeholder="Enter your Email"
           required
         />
         <Form.Label className="mt-4">Password</Form.Label>
