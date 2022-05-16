@@ -1,7 +1,10 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 
+
+
 const MessageBoard = () => {
+
   return (
     <Container>
       <Row>
