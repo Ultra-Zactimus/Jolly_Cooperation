@@ -1,7 +1,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Games from './components/Games';
-import PostMessage from './components/PostMessage';
+import CreateMessage from './components/CreateMessage';
 import MessageDetails from './components/MessageDetails';
 import EditMessage from './components/EditMessage';
 import Login from './components/Login';
@@ -33,7 +33,7 @@ const App = () => {
   };
 
   return (
-    <Router style={{backgroundColor: "grey"}}>
+    <Router>
       <Navbar bg="dark" variant="dark">
         <Container>
           <div className="d-flex justify-content-start mx-4">
@@ -60,7 +60,7 @@ const App = () => {
       </Navbar>
       <Routes>
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
-        <Route path="/post-message" element={<PostMessage />}/>
+        <Route path="/create-message" element={<CreateMessage />}/>
         <Route path="/" element={<MessageBoard />}/>
         <Route path="/messages" element={<MessageList />}/>
         <Route path="/games" element={<Games />}/>

@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { db, auth } from '../lib/init-firebase';
+import { getDocs, collection } from 'firebase/firestore';
 
 const MessageList = () => {
 
-  
+  const [ messageList, setMessageList ] = useState([]);
+  const messagesCollectionRef = collection(db, "messages");
+
+  useEffect(() => {
+    const getMessages = async () => {
+      const data = await getDocs(messagesCollectionRef);
+      setMessageList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getMessages();
+  }, []);
 
   return (
     <Container>

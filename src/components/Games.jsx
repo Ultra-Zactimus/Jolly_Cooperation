@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../lib/init-firebase';
 
+
 const Games = () => {
   const [gameList, setGameList] = useState([]);
   const gamesCollectionsRef = collection(db, "games");
