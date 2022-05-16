@@ -1,7 +1,9 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ isAuth }) => {
+  let navigate = useNavigate();
   return (
     <React.Fragment>
       <Navbar bg="dark" variant="dark">
@@ -15,7 +17,7 @@ const Header = () => {
           <Navbar.Brand
             href="#message-board"
             className="mr-5">Jolly Cooperation</Navbar.Brand>
-          <Navbar.Collapse>
+          {/* <Navbar.Collapse>
             <Nav className="me-auto ml-auto container-fluid justify-content-end">
               <NavDropdown
                 title='User'
@@ -28,8 +30,16 @@ const Header = () => {
                 >Logout</NavDropdown.Item>
               </NavDropdown>
             </Nav>
-          </Navbar.Collapse>
-          <button className="btn btn-success me-2">Register</button>
+          </Navbar.Collapse> */}
+          {!isAuth 
+            ? 
+            <button 
+              className="btn btn-success me-2"
+              onClick={navigate("/login")}>Login</button> 
+            : 
+            <button 
+              className="btn btn-success me-2"
+              onClick={navigate("/login")}>Logout</button>}
         </Container>
       </Navbar>
     </React.Fragment>
