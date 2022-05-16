@@ -9,3 +9,5 @@ I am going to continue watching Mosh's tutorial because I am still not 100% sure
 
 1:48pm after trying to get this working I am starting to fear that I may need to change my proposal to normal React. I am having a super hard time just getting this to work
  1:56 I am changing my proposal from a mobile app to a React app. React native is giving me too many problems and I dont think I have enough time to figure it out before presentations
+
+ currently researching how to have nested collections on firestore

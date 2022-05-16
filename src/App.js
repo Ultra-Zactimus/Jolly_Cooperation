@@ -43,7 +43,7 @@ const App = () => {
             />
           </div>
           <Navbar.Brand
-            href="#message-board"
+            href="/"
             className="mr-5">Jolly Cooperation</Navbar.Brand>
 
           { !isAuth 

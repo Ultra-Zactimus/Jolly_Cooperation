@@ -11,7 +11,7 @@ const MessageBoard = () => {
             <thead>
               <tr>
                 <th scope="col" className="forum-col">
-                  <h4><a href="#">Multiplayer</a></h4>
+                  <h4><strong>Multiplayer</strong></h4>
                 </th>
                 <th scope="col">Games</th>
                 <th scope="col">Posts</th>
@@ -21,7 +21,7 @@ const MessageBoard = () => {
             <tbody>
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">Co-Op</a></h5>
+                  <h5 className="mb-0 h5"><a href="/games">Co-Op</a></h5>
                   <p className="mb-0">Forum for players to meet other players for co-op play</p>
                 </td>
                 <td>
@@ -37,7 +37,7 @@ const MessageBoard = () => {
               </tr>
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">PVP</a></h5>
+                  <h5 className="mb-0 h5"><a href="/games">PVP</a></h5>
                   <p className="mb-0">Forum for players to meet other players for competitive play</p>
                 </td>
                 <td>
@@ -57,7 +57,7 @@ const MessageBoard = () => {
             <thead>
               <tr>
                 <th scope="col" className="forum-col">
-                  <h4><a href="#">Guides</a></h4>
+                  <h4><strong>Guides</strong></h4>
                 </th>
                 <th scope="col">Games</th>
                 <th scope="col">Posts</th>
@@ -103,7 +103,7 @@ const MessageBoard = () => {
             <thead>
               <tr>
                 <th scope="col" className="forum-col">
-                  <h4><a href="#">General Discussion</a></h4>
+                  <h4><strong>General Discussion</strong></h4>
                 </th>
                 <th scope="col">Games</th>
                 <th scope="col">Posts</th>
@@ -149,7 +149,7 @@ const MessageBoard = () => {
             <thead>
               <tr>
                 <th scope="col" className="forum-col">
-                  <h4><a href="#">Help</a></h4>
+                  <h4><strong>Help</strong></h4>
                 </th>
                 <th scope="col">Games</th>
                 <th scope="col">Posts</th>
