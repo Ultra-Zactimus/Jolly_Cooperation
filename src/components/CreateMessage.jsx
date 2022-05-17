@@ -6,9 +6,12 @@ import { useNavigate } from 'react-router-dom';
 
 const PostMessage = () => {
 
+  let navigate = useNavigate();
+
   const [formData, setFormData] = useState(
     {
       game: "",
+      multiplayerType: "",
       title: "",
       platform: "",
       topic: "",
@@ -25,12 +28,14 @@ const PostMessage = () => {
     try {
       await addDoc(collection(db, "messages"), {
         game: formData.game,
+        multiplayerType: formData.multiplayerType,
         title: formData.title,
         platform: formData.platform,
         topic: formData.topic,
         tags: formData.tags,
         createdAt: Timestamp.now().toDate()
       })
+      navigate("/");
     } catch (error) {
       console.log(error.message)
     }
@@ -45,13 +50,48 @@ const PostMessage = () => {
         <Form.Label className="mt-5">
           <strong>Game</strong>
         </Form.Label>
-        <Form.Control
+        <Form.Select
           className="mt-2"
           name="game"
           placeholder="Name of the Game"
           value={formData.game}
-          onChange={(e) => handleChange(e)}
-        />
+          required
+          onChange={(e) => handleChange(e)}>
+            <option>Open this select menu</option>
+            <option value="Animal Crossing: New Horizons">Animal Crossing</option>
+            <option value="Apex Legends">Apex Legends</option>
+            <option value="Bloodborne">Bloodborne</option>
+            <option value="Dark Souls Remastered">Dark Souls Remastered</option>
+            <option value="Dark Souls II">Dark Souls II</option>
+            <option value="Dark Souls III">Dark Souls III</option>
+            <option value="Destiny">Destiny</option>
+            <option value="Destiny 2">Destiny 2</option>
+            <option value="Diablo">Diablo</option>
+            <option value="Diablo II">Diablo II</option>
+            <option value="Diablo III">Diablo III</option>
+            <option value="Elden Ring">Elden Ring</option>
+            <option value="Fortnite">Fortnite</option>
+            <option value="Halo Infinite">Halo Infinite</option>
+            <option value="Minecraft">Minecraft</option>
+            <option value="MTG Arena">MTG Arena</option>
+            <option value="Runescape">Runescape</option>
+            <option value="World of Warcraft">World of Warcraft</option>
+        </Form.Select>
+
+        <Form.Label className="mt-5">
+          <strong>Multiplayer Type</strong>
+        </Form.Label>
+        <Form.Select
+          className="mt-2"
+          name="multiplayerType"
+          placeholder="Type of Multiplayer"
+          value={formData.multiplayerType}
+          required
+          onChange={(e) => handleChange(e)}>
+            <option>Open this select menu</option>
+            <option value="co-op">Co-Op</option>
+            <option value="pvp">PVP</option>
+        </Form.Select>
 
         <Form.Label className="mt-5">
           <strong>Topic Title</strong>
@@ -61,6 +101,7 @@ const PostMessage = () => {
           name="title"
           placeholder="Title of Your Post"
           value={formData.title}
+          required
           onChange={(e) => handleChange(e)}
         />
 
@@ -72,6 +113,7 @@ const PostMessage = () => {
           name="platform"
           placeholder="Platform You Play This Game On"
           value={formData.platform}
+          required
           onChange={(e) => handleChange(e)}
         />
 
@@ -84,6 +126,7 @@ const PostMessage = () => {
           name="topic"
           placeholder="Type Your Message Here"
           value={formData.topic}
+          required
           onChange={(e) => handleChange(e)}
         />
 
@@ -95,6 +138,7 @@ const PostMessage = () => {
           name="tags"
           placeholder="Your Gamer Tags"
           value={formData.tags}
+          required
           onChange={(e) => handleChange(e)}
         />
 
