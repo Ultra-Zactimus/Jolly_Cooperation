@@ -10,7 +10,7 @@ import MessageBoard from './components/MessageBoard';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { signOut } from 'firebase/auth';
-import { auth, db } from './lib/init-firebase';
+import { auth } from './lib/init-firebase';
 import { Navbar, Container } from 'react-bootstrap';
 
 
@@ -56,16 +56,18 @@ const App = () => {
             href="/"
             className="mr-5">Jolly Cooperation</Navbar.Brand>
 
-          { !isAuth 
-            ? 
-            <button 
-              className="btn btn-success me-2"
-              onClick={signingIn}>Login</button> 
-            : 
-            <button 
-              className="btn btn-success me-2"
-              onClick={signOutUser}>Logout</button> }
-
+            { 
+              !isAuth 
+              ? 
+              <button 
+                className="btn btn-success me-2"
+                onClick={signingIn}>Login</button> 
+              : 
+              <button 
+                className="btn btn-success me-2"
+                onClick={signOutUser}>Logout</button> 
+            }
+            
         </Container>
       </Navbar>
       <Routes>

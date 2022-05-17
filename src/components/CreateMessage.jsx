@@ -4,6 +4,7 @@ import { db, auth } from '../lib/init-firebase';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
+
 const CreateMessage = () => {
 
   let navigate = useNavigate();
