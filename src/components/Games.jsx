@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../lib/init-firebase';
+import CreateMessage from './CreateMessage';
 
 
 const Games = () => {
