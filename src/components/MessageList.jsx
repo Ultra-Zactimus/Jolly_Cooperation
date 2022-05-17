@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import { db, auth } from '../lib/init-firebase';
 import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../lib/init-firebase';
 
 
 const MessageList = () => {
-
-  const [ messageList, setMessageList ] = useState([]);
+  const [messageList, setMessageList] = useState([]);
   const messagesCollectionRef = collection(db, "messages");
 
   useEffect(() => {
@@ -29,87 +28,44 @@ const MessageList = () => {
                 <th scope="col" className="forum-col">
                   <h4>Message Title</h4>
                 </th>
+                <th scope="col">Game</th>
+                <th scope="col">Platform</th>
+                <th scope="col">Multiplayer Type</th>
                 <th scope="col">Replies</th>
-                <th scope="col">Date</th>
+                <th scope="col">Date Posted</th>
                 <th scope="col" className="last-post-col">Posted By</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>
-                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
-                  <p>lorem ipsum lorem ipsum</p>
-                </td>
-                <td>
-                  <div>12</div>
-                </td>
-                <td>
-                  02-12-2023
-                </td>
-                <td>
-                  <div><a href="#">username</a></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
-                  <p>lorem ipsum lorem ipsum</p>
-                </td>
-                <td>
-                  <div>12</div>
-                </td>
-                <td>
-                  02-12-2023
-                </td>
-                <td>
-                  <div><a href="#">username</a></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
-                  <p>lorem ipsum lorem ipsum</p>
-                </td>
-                <td>
-                  <div>12</div>
-                </td>
-                <td>
-                  02-12-2023
-                </td>
-                <td>
-                  <div><a href="#">username</a></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
-                  <p>lorem ipsum lorem ipsum</p>
-                </td>
-                <td>
-                  <div>12</div>
-                </td>
-                <td>
-                  02-12-2023
-                </td>
-                <td>
-                  <div><a href="#">username</a></div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h5 className="mb-0 h5"><a href="#">I need help on ...</a></h5>
-                  <p>lorem ipsum lorem ipsum</p>
-                </td>
-                <td>
-                  <div>12</div>
-                </td>
-                <td>
-                  02-12-2023
-                </td>
-                <td>
-                  <div><a href="#">username</a></div>
-                </td>
-              </tr>
+
+              {messageList.map((message) => {
+                return (
+                  <tr key={message.id}>
+                    <td>
+                      <h5 className="mb-0 h5">{message.title}</h5>
+                    </td>
+                    <td>
+                      <div>{message.game}</div>
+                    </td>
+                    <td>
+                      <div>{message.platform}</div>
+                    </td>
+                    <td>
+                      <div>{message.multiplayerType}</div>
+                    </td>
+                    <td>
+                      <div>3</div>
+                    </td>
+                    {/* <td>
+                      <div>{message.createdAt}</div>
+                    </td> */}
+                    <td>
+                      <div>{message.author}</div>
+                    </td>
+                  </tr>
+                );
+              })}
+
             </tbody>
           </table>
         </div>

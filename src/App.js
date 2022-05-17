@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Games from './components/Games';
 import CreateMessage from './components/CreateMessage';
 import MessageDetails from './components/MessageDetails';
-import EditMessage from './components/EditMessage';
 import Login from './components/Login';
 import MessageList from './components/MessageList';
 import MessageBoard from './components/MessageBoard';
@@ -74,9 +73,8 @@ const App = () => {
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
         <Route path="/create-message" element={<CreateMessage />}/>
         <Route path="/" element={<MessageBoard />}/>
-        <Route path="/messages" element={<MessageList />}/>
+        <Route path="/message-list" element={<MessageList />}/>
         <Route path="/games" element={<Games />}/>
-        <Route path="/edit-post" element={<EditMessage />}/>
         <Route path="/post-details" element={<MessageDetails />}/>
       </Routes>
     </Router>
