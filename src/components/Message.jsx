@@ -17,31 +17,28 @@ const Message = () => {
                 <th scope="col" className="forum-col">
                   <h4>Title</h4>
                 </th>
-                <th scope="col">Platforms</th>
-                <th scope="col">Genre</th>
-                <th scope="col">Posts</th>
-                <th scope="col" className="last-post-col">Most Recent Post</th>
+                <th scope="col">Message/Replies</th>
+                <th scope="col">User</th>
+                <th scope="col">User</th>
               </tr>
             </thead>
             <tbody>
+
               <tr>
                 <td>
-                  <h5 className="mb-0 h5"><a href="#">Destiny 2</a></h5>
+                  <h5 className="mb-0 h5">title</h5>
                 </td>
                 <td>
-                  <div>PC, XBOX, PlayStation</div>
+                  <p>message body</p>
                 </td>
                 <td>
-                  FPS
+                  <div>username</div>
                 </td>
                 <td>
-                  50
-                </td>
-                <td>
-                  <h5 className="h6 mb-0"><a href="#">Title Name</a></h5>
-                  <div>by <a href="#">username</a></div>
+                  <button>Reply</button>
                 </td>
               </tr>
+
             </tbody>
           </table>
         </div>
