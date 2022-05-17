@@ -1,8 +1,7 @@
 import './styles/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Games from './components/Games';
 import CreateMessage from './components/CreateMessage';
-import MessageDetails from './components/MessageDetails';
+import Message from './components/Message';
 import Login from './components/Login';
 import MessageList from './components/MessageList';
 import MessageBoard from './components/MessageBoard';
@@ -74,8 +73,7 @@ const App = () => {
         <Route path="/create-message" element={<CreateMessage />}/>
         <Route path="/" element={<MessageBoard />}/>
         <Route path="/message-list" element={<MessageList />}/>
-        <Route path="/games" element={<Games />}/>
-        <Route path="/post-details" element={<MessageDetails />}/>
+        <Route path="/message" element={<Message />}/>
       </Routes>
     </Router>
   );

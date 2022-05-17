@@ -1,8 +1,11 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../lib/init-firebase';
 
 
-const MessageDetails = () => {
+const Message = () => {
+
   return (
     <Container>
       <Row>
@@ -47,4 +50,4 @@ const MessageDetails = () => {
   );
 }
 
-export default MessageDetails;
+export default Message;
