@@ -17,3 +17,6 @@ I am going to continue watching Mosh's tutorial because I am still not 100% sure
 
  trying to research how I can pass my thisMessage state to Message without rendering Message in MessageList
  3:23pm
+
+ I am completely lost right now and getting frustrated. going to take a small break.
+ 4:05pm
