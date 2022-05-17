@@ -1,98 +1,106 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-import { db, auth } from '../lib/init-firebase';
-import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../lib/init-firebase';
+import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
 const PostMessage = () => {
 
-  let navigate = useNavigate();
+  const [formData, setFormData] = useState(
+    {
+      game: "",
+      title: "",
+      platform: "",
+      topic: "",
+      tags: "",
+      createdAt: Timestamp.now().toDate()
+    });
 
-  const [ title, setTitle ] = useState('');
-  const [ platform, setPlatform ] = useState('');
-  const [ description, setDescription ] = useState('');
-  const [ topicMessage, setTopicMessage ] = useState('');
-  const [ tags, setTags ] = useState('');
-  const [game, setGame] = useState('');
-
-  const messageCollectionRef = collection(db, "messages");
-
-  const createMessage = async () => {
-    await addDoc(messageCollectionRef, 
-      { 
-        title,
-        game, 
-        platform, 
-        description, 
-        topicMessage, 
-        tags,
-        author: { 
-          name: auth.currentUser.displayName, 
-          id: auth.currentUser.uid
-        }
-      });
-      navigate("/");
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      await addDoc(collection(db, "messages"), {
+        game: formData.game,
+        title: formData.title,
+        platform: formData.platform,
+        topic: formData.topic,
+        tags: formData.tags,
+        createdAt: Timestamp.now().toDate()
+      })
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
   return (
-    <Container 
+    <Container
       className="justify-content-center d-flex border border-dark rounded mt-5 mb-5 pl-5 pr-5">
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <h3 className="mt-5">Post a New Message</h3>
 
-        <Form.Label className="mt-5">Game</Form.Label>
-        <Form.Control 
+        <Form.Label className="mt-5">
+          <strong>Game</strong>
+        </Form.Label>
+        <Form.Control
           className="mt-2"
           name="game"
           placeholder="Name of the Game"
-          onChange={(e) => setGame(e.target.value)}
+          value={formData.game}
+          onChange={(e) => handleChange(e)}
         />
 
-        <Form.Label className="mt-5">Platform</Form.Label>
-        <Form.Control 
-          className="mt-2"
-          name="platform"
-          placeholder="Platform You Play This Game On"
-          onChange={(e) => setPlatform(e.target.value)}
-        />
-
-        <Form.Label className="mt-5">Topic Title</Form.Label>
-        <Form.Control 
+        <Form.Label className="mt-5">
+          <strong>Topic Title</strong>
+        </Form.Label>
+        <Form.Control
           className="mt-2"
           name="title"
           placeholder="Title of Your Post"
-          onChange={(e) => setTitle(e.target.value)}
+          value={formData.title}
+          onChange={(e) => handleChange(e)}
         />
 
-        <Form.Label className="mt-5">Topic Description</Form.Label>
-        <Form.Control 
+        <Form.Label className="mt-5">
+          <strong>Platform</strong>
+        </Form.Label>
+        <Form.Control
           className="mt-2"
-          name="description"
-          placeholder="Brief Description of Topic"
-          onChange={(e) => setDescription(e.target.value)}
+          name="platform"
+          placeholder="Platform You Play This Game On"
+          value={formData.platform}
+          onChange={(e) => handleChange(e)}
         />
 
-        <Form.Label className="mt-5">Your Message</Form.Label>
-        <Form.Control 
+        <Form.Label className="mt-5">
+          <strong>Your Message</strong>
+        </Form.Label>
+        <Form.Control
           className="mt-2 from-control-lg"
           as="textarea"
-          name="message"
+          name="topic"
           placeholder="Type Your Message Here"
-          onChange={(e) => setTopicMessage(e.target.value)}
+          value={formData.topic}
+          onChange={(e) => handleChange(e)}
         />
 
-        <Form.Label className="mt-5">Your Gamer Tags</Form.Label>
-        <Form.Control 
+        <Form.Label className="mt-5">
+          <strong>Your Gamer Tags</strong>
+        </Form.Label>
+        <Form.Control
           className="mt-2"
           name="tags"
           placeholder="Your Gamer Tags"
-          onChange={(e) => setTags(e.target.value)}
+          value={formData.tags}
+          onChange={(e) => handleChange(e)}
         />
 
-        <Button 
+        <Button
           className="btn btn-success mt-5 mb-5 shadow-sm"
-          type="submit"
-          onClick={createMessage}>Post Message</Button>
+          type="submit">Post Message</Button>
       </Form>
     </Container>
   );
