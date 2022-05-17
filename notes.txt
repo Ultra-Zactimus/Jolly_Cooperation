@@ -11,3 +11,6 @@ I am going to continue watching Mosh's tutorial because I am still not 100% sure
  1:56 I am changing my proposal from a mobile app to a React app. React native is giving me too many problems and I dont think I have enough time to figure it out before presentations
 
  currently researching how to have nested collections on firestore
+
+ doing more research on how I might be able to nest data into another collection. 
+ need specific collections to be tied to messages 5-17-2022 8:40am
