@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-import { db } from '../lib/init-firebase';
+import { db, auth } from '../lib/init-firebase';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
@@ -33,6 +33,8 @@ const PostMessage = () => {
         platform: formData.platform,
         topic: formData.topic,
         tags: formData.tags,
+        author: auth.currentUser.displayName,
+        authorId: auth.currentUser.uid,
         createdAt: Timestamp.now().toDate()
       })
       navigate("/");
