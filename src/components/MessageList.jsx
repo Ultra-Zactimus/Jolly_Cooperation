@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../lib/init-firebase';
+import Message from './Message';
+import { render } from '@testing-library/react';
 
 
 const MessageList = () => {
   const [messageList, setMessageList] = useState([]);
+  const [thisMessage, setThisMessage] = useState([]);
   const messagesCollectionRef = collection(db, "messages");
 
   useEffect(() => {
@@ -43,7 +46,11 @@ const MessageList = () => {
                 return (
                   <tr key={message.id}>
                     <td>
-                      <h5 className="mb-0 h5"><a onClick={()=>{}} href="/message-details">{message.title}</a></h5>
+                      <h5 className="mb-0 h5">
+                        <a 
+                          onClick={()=> setThisMessage(this.message)} 
+                          href="/message-details">{message.title}</a>
+                      </h5>
                     </td>
                     <td>
                       <div>{message.game}</div>
@@ -74,5 +81,6 @@ const MessageList = () => {
     </Container>
   );
 }
+<Message thisMessage={thisMessage}/>
 
 export default MessageList;

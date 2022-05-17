@@ -14,3 +14,6 @@ I am going to continue watching Mosh's tutorial because I am still not 100% sure
 
  doing more research on how I might be able to nest data into another collection. 
  need specific collections to be tied to messages 5-17-2022 8:40am
+
+ trying to research how I can pass my thisMessage state to Message without rendering Message in MessageList
+ 3:23pm
