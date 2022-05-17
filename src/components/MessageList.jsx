@@ -38,11 +38,12 @@ const MessageList = () => {
             </thead>
             <tbody>
 
-              {messageList.map((message) => {
+              {
+              messageList.map((message) => {
                 return (
                   <tr key={message.id}>
                     <td>
-                      <h5 className="mb-0 h5">{message.title}</h5>
+                      <h5 className="mb-0 h5"><a onClick={()=>{}} href="/message-details">{message.title}</a></h5>
                     </td>
                     <td>
                       <div>{message.game}</div>
@@ -56,9 +57,9 @@ const MessageList = () => {
                     <td>
                       <div>3</div>
                     </td>
-                    {/* <td>
-                      <div>{message.createdAt}</div>
-                    </td> */}
+                    <td>
+                      <div>{Date(message.createdAt.seconds*1000)}</div>
+                    </td>
                     <td>
                       <div>{message.author}</div>
                     </td>
