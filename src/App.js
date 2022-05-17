@@ -11,26 +11,22 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { signOut } from 'firebase/auth';
 import { auth, db } from './lib/init-firebase';
-import { getDocs, collection } from 'firebase/firestore';
 import { Navbar, Container } from 'react-bootstrap';
 
 
 const App = () => {
 
   const [ isAuth, setIsAuth ] = useState(false);
-  const [ gameId, setGameId ] = useState([])
-  const gamesCollectionsRef = collection(db, "games");
 
   useEffect(() => {
-    const getGameId = async () => {
-      const data = await getDocs(gamesCollectionsRef);
-      setGameId(data.docs.map((doc) => ({...doc.uid})));
-    };
-
-    getGameId();
-  }, []);
-
-  const props = gameId;
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            setIsAuth(true)
+        } else {
+            setIsAuth(false)
+        }
+    })
+  }, [isAuth])
 
   const signOutUser = () => {
     signOut(auth).then(() => {
@@ -74,7 +70,7 @@ const App = () => {
       </Navbar>
       <Routes>
         <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
-        <Route path="/create-message" element={<CreateMessage gameId={props}/>}/>
+        <Route path="/create-message" element={<CreateMessage />}/>
         <Route path="/" element={<MessageBoard />}/>
         <Route path="/messages" element={<MessageList />}/>
         <Route path="/games" element={<Games />}/>

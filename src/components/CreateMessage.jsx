@@ -4,11 +4,9 @@ import { db, auth } from '../lib/init-firebase';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
-const CreateMessage = ({ gameId }) => {
+const CreateMessage = () => {
 
   let navigate = useNavigate();
-
-  console.log(gameId)
 
   const [formData, setFormData] = useState(
     {
@@ -30,7 +28,6 @@ const CreateMessage = ({ gameId }) => {
     try {
       await addDoc(collection(db, "messages"), {
         game: formData.game,
-        gameId: gameId,
         multiplayerType: formData.multiplayerType,
         title: formData.title,
         platform: formData.platform,
