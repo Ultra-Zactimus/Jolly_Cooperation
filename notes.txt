@@ -20,3 +20,9 @@ I am going to continue watching Mosh's tutorial because I am still not 100% sure
 
  I am completely lost right now and getting frustrated. going to take a small break.
  4:05pm
+
+ doing further research
+ 8:24
+
+ still trying to research about how I can pass data from messageList to Message
+ 9:26
