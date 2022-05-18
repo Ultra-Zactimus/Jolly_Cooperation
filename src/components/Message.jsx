@@ -1,11 +1,10 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import { getDocs, collection } from 'firebase/firestore';
-import { db } from '../lib/init-firebase';
 
 
-const Message = () => {
+const Message = ({ messageData }) => {
 
+  console.log(messageData);
   return (
     <Container>
       <Row>
@@ -17,25 +16,35 @@ const Message = () => {
                 <th scope="col" className="forum-col">
                   <h4>Title</h4>
                 </th>
-                <th scope="col">Message/Replies</th>
-                <th scope="col">User</th>
-                <th scope="col">User</th>
+                <th scope="col">Game</th>
+                <th scope="col">Platform</th>
+                <th scope="col">MulitplayerType</th>
+                <th scope="col">Replies</th>
+                <th scope="col">Author</th>
               </tr>
             </thead>
             <tbody>
 
-              <tr>
+              <tr key={messageData.id}>
                 <td>
-                  <h5 className="mb-0 h5">title</h5>
+                  <h5 className="mb-0 h5">
+                    <a href="/message">{messageData.title}</a>
+                  </h5>
                 </td>
                 <td>
-                  <p>message body</p>
+                  <div>{messageData.game}</div>
                 </td>
                 <td>
-                  <div>username</div>
+                  <div>{messageData.platform}</div>
                 </td>
                 <td>
-                  <button>Reply</button>
+                  <div>{messageData.multiplayerType}</div>
+                </td>
+                <td>
+                  <div>0</div>
+                </td>
+                <td>
+                  <div>{messageData.author}</div>
                 </td>
               </tr>
 
