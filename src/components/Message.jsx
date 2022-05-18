@@ -4,6 +4,23 @@ import { Container, Row } from 'react-bootstrap';
 
 const Message = ({messageData}) => {
 
+  const handleClick = () => {
+    <table className="table table-striped table-bordered table-responsive table-dark">
+      <thead>
+        <tr>
+          <th scope="col" className="forum-col">
+            <h4>Message</h4>
+          </th>
+          <th scope="col">Replies</th>
+        </tr>
+        <tr>
+          <td>{messageData.topicMessage}</td>
+          <td>reply</td><button>Reply</button>
+        </tr>
+      </thead>
+    </table>
+  }
+
   return (
     <Container>
       <Row>
@@ -27,7 +44,7 @@ const Message = ({messageData}) => {
               <tr>
                 <td>
                   <h5 className="mb-0 h5">
-                    <span onClick={() => {}}>{messageData.title}</span>
+                    <span onClick={handleClick}>{messageData.title}</span>
                   </h5>
                 </td>
                 <td>

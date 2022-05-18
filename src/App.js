@@ -42,6 +42,7 @@ const App = () => {
 
   return (
     <Router>
+      <style>{'body { background-color:  rgb(72, 86, 87); }'}</style>
       <Navbar bg="dark" variant="dark">
         <Container>
           <div className="d-flex justify-content-start mx-4">
