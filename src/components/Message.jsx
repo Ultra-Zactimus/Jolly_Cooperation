@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import MessageDetails from './MessageDetails';
+import { useNavigate } from 'react-router-dom';
 
 
 const Message = ({messageData}) => {
+
+  let navigate = useNavigate();
 
   return (
     <Container>
@@ -19,8 +21,10 @@ const Message = ({messageData}) => {
                 <th scope="col">Game</th>
                 <th scope="col">Platform</th>
                 <th scope="col">MulitplayerType</th>
-                <th scope="col">Replies</th>
+                <th scope="col">Message</th>
+                <th scope="col">Tags</th>
                 <th scope="col">Author</th>
+                <th scope="col">Reply</th>
               </tr>
             </thead>
             <tbody>
@@ -28,7 +32,7 @@ const Message = ({messageData}) => {
               <tr>
                 <td>
                   <h5 className="mb-0 h5">
-                    <span>{messageData.title}</span>
+                    {messageData.title}
                   </h5>
                 </td>
                 <td>
@@ -41,13 +45,20 @@ const Message = ({messageData}) => {
                   <div>{messageData.multiplayerType}</div>
                 </td>
                 <td>
-                  <div>0</div>
+                  <div>{messageData.topic}</div>
+                </td>
+                <td>
+                  <div>{messageData.tags}</div>
                 </td>
                 <td>
                   <div>{messageData.author}</div>
                 </td>
+                <td>
+                  <div>
+                  <p><span onClick={navigate("/reply")}>Click To Reply</span></p>
+                  </div>
+                </td>
               </tr>
-
             </tbody>
           </table>
         </div>

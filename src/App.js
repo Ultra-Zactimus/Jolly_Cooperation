@@ -4,6 +4,7 @@ import CreateMessage from './components/CreateMessage';
 import Login from './components/Login';
 import MessageList from './components/MessageList';
 import MessageBoard from './components/MessageBoard';
+import Reply from './components/Reply';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { signOut } from 'firebase/auth';
@@ -73,6 +74,7 @@ const App = () => {
         <Route path="/create-message" element={<CreateMessage />}/>
         <Route path="/" element={<MessageBoard />}/>
         <Route path="/message-list" element={<MessageList />}/>
+        <Route path="/reply" element={<Reply />}/>
       </Routes>
     </Router>
   );
