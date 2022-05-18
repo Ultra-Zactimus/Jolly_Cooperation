@@ -1,25 +1,9 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import MessageDetails from './MessageDetails';
 
 
 const Message = ({messageData}) => {
-
-  const handleClick = () => {
-    <table className="table table-striped table-bordered table-responsive table-dark">
-      <thead>
-        <tr>
-          <th scope="col" className="forum-col">
-            <h4>Message</h4>
-          </th>
-          <th scope="col">Replies</th>
-        </tr>
-        <tr>
-          <td>{messageData.topicMessage}</td>
-          <td>reply</td><button>Reply</button>
-        </tr>
-      </thead>
-    </table>
-  }
 
   return (
     <Container>
@@ -44,7 +28,7 @@ const Message = ({messageData}) => {
               <tr>
                 <td>
                   <h5 className="mb-0 h5">
-                    <span onClick={handleClick}>{messageData.title}</span>
+                    <span>{messageData.title}</span>
                   </h5>
                 </td>
                 <td>
