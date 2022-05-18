@@ -7,6 +7,10 @@ const Message = ({messageData}) => {
 
   let navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate("/reply")
+  }
+
   return (
     <Container>
       <Row>
@@ -55,7 +59,7 @@ const Message = ({messageData}) => {
                 </td>
                 <td>
                   <div>
-                  <p><span onClick={navigate("/reply")}>Click To Reply</span></p>
+                  <p><span onClick={handleClick}>Click To Reply</span></p>
                   </div>
                 </td>
               </tr>
