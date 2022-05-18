@@ -15,7 +15,7 @@ const MessageList = () => {
       setMessageList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     }
     getMessages();
-  });
+  },[]);
 
   return (
     <Container>
@@ -24,13 +24,14 @@ const MessageList = () => {
         messageList.map((message) => {
           return (
             <React.Fragment key={message.id}>
-              <Message messageData={message}/>
+              <Message messageData={message} />
             </React.Fragment>
           );
         })}
       </Row>
     </Container>
   );
+  
 }
 
 export default MessageList;

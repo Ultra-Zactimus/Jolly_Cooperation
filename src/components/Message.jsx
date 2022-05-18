@@ -2,9 +2,8 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 
 
-const Message = ({ messageData }) => {
+const Message = ({messageData}) => {
 
-  console.log(messageData);
   return (
     <Container>
       <Row>
@@ -25,10 +24,10 @@ const Message = ({ messageData }) => {
             </thead>
             <tbody>
 
-              <tr key={messageData.id}>
+              <tr>
                 <td>
                   <h5 className="mb-0 h5">
-                    <a href="/message">{messageData.title}</a>
+                    <span onClick={() => {}}>{messageData.title}</span>
                   </h5>
                 </td>
                 <td>

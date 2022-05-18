@@ -2,6 +2,15 @@ body {
   background-color: rgb(72, 86, 87);
 }
 
+span {
+  color:blue;
+}
+
+span:hover {
+  color:aqua;
+  cursor: pointer;
+}
+
 .forum-col {
   min-width: 256px;
 }
