@@ -2,7 +2,7 @@
 
 #### By Zachary Green
 
-#### _placeholder_
+#### _This application was created using React.js and Google Firebase. The application is an Internet Forum for video game enthusiasts who need to find players to do multiplayer with. This project started out as a proposal for a capstone project for Epicodus programming school, but it grew into something more of a passion project for me. There are many video games on the market that offer online play for their users, but not all games have good match making systems in place to allow users to actually find and meet new players to play games. This application was meant to be a solution to that problem._
 
 ## Technologies Used
 * `HTML`
@@ -16,7 +16,7 @@
 
 ## Description
 
-_placeholder_
+_The user has the ability to view a Message Board as the home page where they can choose from different sections. There is a section for multiplayer as well as sections for General Discussion, Tecnical Support and even Guides. The user signs into the application via google and can then create new posts to different sections of the website. (at this time only the Multiplayer section is up) Users can then find posts on the Message List and make Replies to other users.(this feature is still on construction)_
 
 ## Diagram
 
@@ -36,7 +36,20 @@ _{You do not need to add the `$` to the terminal commands. GitBash comes with th
 
 ## Known Bugs
 
-* no known bugs at this time
+* The applications Reply feature is not working as intended. The goal is to have a sub collection created within a specific message through that message's id that will store the replies for that message, but currently I have not been able to get the examples in the official documentation working in this application.
+* Ther application shows the user logged out for a brief moment on refresh or page transitions which should not be happening. The user is still signed in because their logged in status is being stored into local storage.
+
+## Stretch Goals
+
+* This application is very much so, a work in progress there are many features that I still want to add to this application and some can still be seen on the Message Board.
+
+* I wanted the Message Board to go beyond just people looking for Multiplayer opportunities. I want this forum to grow into a place where users can have a community to discuss gaming and even run polls. The sections exist on the main page, but their functionality has not been implemented. These features are something I am looking to try to implement in the coming months in preparation of making this a hosted project.
+
+* My original intent was to have a User Profile page where users could create a custom avatar, usrename and About Me section. I want there to be a drop down menu on the Navigation Bar that would allow users to view their profile and even receive notifications when users have posted replies to content they have created. Using google authorization made this more challenging and I decided to save this feature as stretch goal.
+
+* Another feature I wanted to be able to implement would be for users to upload their own content to the page, whether that be images, gifs, custom youtube videos or even mp4 of their gameplay. Google Firebase offers a feature to upload content like that to Firestore and it is something I very much want to have present on this application. I just did not have time to implement this feature due to trying to get the projects MVP completed within the time frame of the presentation deadline.
+
+* There is a section I created for Walkthroughs which I had intended to be a place where users can actually create their own guides to games. I wanted to allow the user a lot of freedom in customizing this to their liking. This might by far be the most challenging part of the project, but I feel it would bring a really great feature to this application and make it stand out.
 
 ## License
 
