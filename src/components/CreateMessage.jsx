@@ -16,8 +16,7 @@ const CreateMessage = () => {
       title: "",
       platform: "",
       topic: "",
-      tags: "",
-      createdAt: Timestamp.now().toDate()
+      tags: ""
     });
 
   const handleChange = (e) => {
@@ -35,13 +34,16 @@ const CreateMessage = () => {
         topic: formData.topic,
         tags: formData.tags,
         author: auth.currentUser.displayName,
-        authorId: auth.currentUser.uid,
-        createdAt: Timestamp.now().toDate()
+        authorId: auth.currentUser.uid
       })
       navigate("/");
     } catch (error) {
       console.log(error.message)
     }
+  }
+
+  const handleClick = () => {
+    navigate("/message-list")
   }
 
   return (
@@ -148,6 +150,10 @@ const CreateMessage = () => {
         <Button
           className="btn btn-success mt-5 mb-5 shadow-sm"
           type="submit">Post Message</Button>
+        <Button
+          className="btn btn-danger mt-5 mb-5 mx-5 shadow-sm"
+          onClick={handleClick}
+          >Cancel</Button>
       </Form>
     </Container>
   );

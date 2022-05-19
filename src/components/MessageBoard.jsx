@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { Navigate } from 'react-router';
 
 
 const MessageBoard = () => {

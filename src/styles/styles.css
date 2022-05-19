@@ -8,9 +8,13 @@ span:hover {
 }
 
 .forum-col {
-  min-width: 256px;
+  min-width: 210px;
 }
 
 .last-post-col {
-  min-width: 192px;
+  min-width: 400px;
+}
+
+.col-width {
+  min-width: 25px;
 }
