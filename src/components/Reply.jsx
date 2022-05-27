@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { auth, db } from '../lib/init-firebase';
-import { doc, collection, setDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
+import { doc, setDoc, getDocs, query, collection } from 'firebase/firestore';
 
 
 const Reply = () => {
-
-  let navigate = useNavigate();
 
   const [details, setDetails] = useState(
     {
@@ -26,7 +23,7 @@ const Reply = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await setDoc(doc(db, "replies", details.author), {
+    await setDoc(doc(db, "replies", auth.currentUser.uid), {
       author: auth.currentUser.displayName,
       authorId: auth.currentUser.uid,
       message: details.message,
@@ -39,6 +36,25 @@ const Reply = () => {
       tags: ""
     });
   }
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     const q = query(collection(db, "messages"));
+//     const querySnapshot = await getDocs(q);
+//     const queryData = querySnapshot.docs.map((detail) => ({
+//         ...detail.data(),
+//         id: detail.id,
+//     }));
+//     console.log(queryData);
+//     queryData.map(async (v) => {
+//         await setDoc(doc(db, `messages/${v.id}/replies`, details.id), {
+//           author: auth.currentUser.displayName,
+//           authorId: auth.currentUser.uid,
+//           message: details.message,
+//           tags: details.tags
+//         });
+//     })
+// };
 
 return (
   <Container
